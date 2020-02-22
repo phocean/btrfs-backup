@@ -3,7 +3,7 @@
 ## Simple BTRFS backup script based on official Wiki:
 ## https://btrfs.wiki.kernel.org/index.php/Incremental_Backup
 ## Usage : ./btrfs-backup.sh
-## See configuration section to adjust your paths
+## See configuration section to adjust your paths.
 
 ## Recovery steps to any BTRFS file system:
 ## % sudo btrfs send /media/BACKUP | sudo btrfs receive /media/DEST
