@@ -36,7 +36,7 @@ for SOURCE in ${SOURCES[@]}; do
     fi
     if [ ! -d $SOURCE ]; then
         echo -e "[+] Source not found. Skipping..."
-        break
+        continue
     fi
     # create missing folders
     if [ ! -d $SNAPSHOTPATH ]; then
@@ -52,7 +52,7 @@ for SOURCE in ${SOURCES[@]}; do
         echo -e "[+] Sending bootstrap to backup media"
         sudo btrfs send $SOURCE/BACKUP | sudo btrfs receive $SNAPSHOTPATH
         ## bootstrap done, go ahead with next subvolume (skip incremental this time)
-        break
+        continue
     fi
     # do incremental backup
     ## create new snapshot on the source
