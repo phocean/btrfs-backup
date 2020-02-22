@@ -39,3 +39,7 @@ Using this `ID`, let's say `259`, set it as the volume's default:
 
 For changes to take effect, remount the disk or reboot.
 
+## TODO
+
+* improve error handling and corner cases
+* replace path checks with appropriate BTRFS subvolume tests
